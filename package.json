@@ -1,0 +1,20 @@
+{
+  "name": "@pipeworx/mcp-kegg",
+  "version": "0.1.0",
+  "description": "KEGG REST MCP — Kyoto Encyclopedia of Genes and Genomes.",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "kegg"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pipeworx-io/mcp-kegg"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}
