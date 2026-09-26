@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-kegg",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "KEGG REST MCP — Kyoto Encyclopedia of Genes and Genomes.",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-3f999803bb7f6d2bcc5ae09ea29a56e48f98c3a87b6c7b75962fa135cc16d6d6",
-    "sourceCommit": "70cd53748fc9f9a43ed3681d751bfa96e701efd2"
+    "sourceHash": "v1-f156fb86435e02ec8304245f7d8a6e7d0ac11652ed929618e4c734489f119957",
+    "sourceCommit": "1064560fd9dcd0d6fc2606298c2ba244b3a1fbeb"
   }
 }
