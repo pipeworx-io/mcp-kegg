@@ -1,0 +1,55 @@
+[
+  {
+    "name": "find",
+    "description": "Search KEGG by keyword. KEGG is the authoritative bioinformatics database for compounds, drugs, diseases, metabolic pathways, genes, and enzymes. Pick a database (compound|drug|disease|pathway|genes|enzyme|glycan|module|ko) and pass a query like \"glucose\", \"aspirin\", or \"diabetes\". Returns matching KEGG IDs with descriptions. Keyless.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "database": {
+          "type": "string",
+          "description": "One of: compound, drug, disease, pathway, genes, enzyme, glycan, module, ko."
+        },
+        "query": {
+          "type": "string",
+          "description": "Search term, e.g. \"glucose\", \"aspirin\", \"diabetes\"."
+        }
+      },
+      "required": [
+        "database",
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "get_entry",
+    "description": "Fetch a full KEGG flat-file entry by ID and return it as parsed fields plus raw text. IDs look like \"C00031\" (compound), \"hsa00010\" (pathway), \"D00009\" (drug), \"K00844\" (KO/ortholog), or \"ec:1.1.1.1\" (enzyme). Parsed fields include ENTRY, NAME, FORMULA, CLASS, PATHWAY, DESCRIPTION, cross-references, and more. Use find first to discover IDs. Keyless.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "A KEGG entry ID, e.g. \"C00031\", \"hsa00010\", \"D00009\", \"K00844\", \"ec:1.1.1.1\"."
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  {
+    "name": "list_database",
+    "description": "List all entries in a KEGG database (id + description). Useful for enumerating things like KEGG pathways (\"pathway\"), drugs (\"drug\"), or supported organisms (\"organism\"). Results are capped at 100 with a truncated flag. Keyless.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "database": {
+          "type": "string",
+          "description": "A KEGG database name, e.g. \"pathway\", \"organism\", \"drug\", \"compound\"."
+        }
+      },
+      "required": [
+        "database"
+      ]
+    }
+  }
+]
